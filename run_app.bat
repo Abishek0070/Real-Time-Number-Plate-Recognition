@@ -1,6 +1,6 @@
 @echo off
 echo ========================================================
-echo        Starting ANPR Sentinel Streamlit Web UI
+echo     Starting Smart Number Plate Reader Web UI
 echo ========================================================
 echo Activating virtual environment and launching application...
 cd /d "%~dp0"

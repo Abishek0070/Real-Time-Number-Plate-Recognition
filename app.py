@@ -19,7 +19,7 @@ from anpr_engine import ANPREngine
 
 # Page Configuration - auto sidebar for mobile, wide on desktop
 st.set_page_config(
-    page_title="ANPR Sentinel | AI License Plate Recognition",
+    page_title="Smart Number Plate Reader",
     page_icon="🚗",
     layout="wide",
     initial_sidebar_state="auto"
@@ -283,8 +283,8 @@ if "session_history" not in st.session_state:
 # Sidebar Settings & Model Parameters
 with st.sidebar:
     st.image("https://img.icons8.com/fluency/96/license-plate.png", width=56)
-    st.title("ANPR Settings")
-    st.caption("SSD MobileNet V2 + EasyOCR")
+    st.title("Plate Scanner")
+    st.caption("AI Vehicle Detection & Text Reader")
     st.divider()
 
     st.subheader("⚙️ Detection Thresholds")
@@ -332,8 +332,8 @@ with st.sidebar:
 st.markdown("""
 <div class="hero-header">
     <div>
-        <h1 class="hero-title">🚗 ANPR Sentinel AI</h1>
-        <div class="hero-subtitle">Real-Time Number Plate Detection & Text Recognition</div>
+        <h1 class="hero-title">🚗 Smart Number Plate Reader</h1>
+        <div class="hero-subtitle">Instant Vehicle License Plate Detection & Scanner</div>
     </div>
     <div>
         <span class="hero-badge">
@@ -631,7 +631,7 @@ with tab_logs:
         st.download_button(
             "📥 Download Session CSV",
             data=csv_data,
-            file_name=f"anpr_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+            file_name=f"number_plate_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
             mime="text/csv",
             use_container_width=True
         )
