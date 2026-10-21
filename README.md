@@ -1,6 +1,23 @@
 # Real-Time-Number-Plate-Recognition
 ![1_-1D-CabftTbQpm01cp3Dpg](https://user-images.githubusercontent.com/56076028/145536187-50aaa69f-655c-4459-8353-78327a2c0f7c.gif)
 
+## 🚀 Streamlit Web Application
+
+Run the modern interactive web app for real-time license plate detection and character recognition:
+
+```bash
+# Using the launcher script (Windows)
+run_app.bat
+
+# Or directly with streamlit
+streamlit run app.py
+```
+
+### Features:
+- 📸 **Image Upload & Demo Vehicles**: Upload vehicle photos or choose from pre-loaded vehicle samples.
+- 📹 **Video Stream Scanner**: Frame-by-frame analysis with configurable sampling rate and unique plate discovery.
+- 🎥 **Live Camera Input**: Instant snapshot recognition via webcam or mobile camera.
+- 📊 **Detection History & Export**: Live session table with confidence scores, persistent logging, and CSV download.
 
 ## Tech Stack
 * [yolov4](https://github.com/theAIGuysCode/yolov4-custom-functions) : I used this OD model because it performs much better than traditional computer vision methods.
