@@ -1,4 +1,10 @@
 import os
+# Ensure legacy Keras, disable oneDNN conflicts, and suppress C++ warnings
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
 import io
 import time
 import tempfile

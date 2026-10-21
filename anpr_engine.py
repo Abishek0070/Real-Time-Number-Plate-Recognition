@@ -6,9 +6,11 @@ from typing import Dict, List, Tuple, Optional
 import numpy as np
 import cv2
 
-# Ensure legacy Keras and minimal TF warnings
+# Ensure legacy Keras, disable oneDNN conflicts, and suppress C++ warnings
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 os.environ["TF_USE_LEGACY_KERAS"] = "1"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 import tensorflow as tf
 from object_detection.utils import config_util
