@@ -4,6 +4,7 @@ easyocr>=1.7.0
 tensorflow>=2.15.0
 tf-keras
 tf-slim
+tensorflow-io
 pandas
 numpy<2.0.0
 pillow

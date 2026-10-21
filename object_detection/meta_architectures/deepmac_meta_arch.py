@@ -25,7 +25,10 @@ from object_detection.utils import spatial_transform_ops
 from object_detection.utils import tf_version
 
 if tf_version.is_tf2():
-  import tensorflow_io as tfio  # pylint:disable=g-import-not-at-top
+  try:
+    import tensorflow_io as tfio  # pylint:disable=g-import-not-at-top
+  except Exception:
+    tfio = None
 
 
 INSTANCE_EMBEDDING = 'INSTANCE_EMBEDDING'
