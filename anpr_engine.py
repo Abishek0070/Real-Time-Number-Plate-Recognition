@@ -6,7 +6,8 @@ from typing import Dict, List, Tuple, Optional
 import numpy as np
 import cv2
 
-# Ensure legacy Keras, disable oneDNN conflicts, and suppress C++ warnings
+# Ensure legacy Keras, disable oneDNN conflicts, set python protobuf, and suppress C++ warnings
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 os.environ["TF_USE_LEGACY_KERAS"] = "1"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"

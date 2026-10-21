@@ -1,5 +1,6 @@
 import os
-# Ensure legacy Keras, disable oneDNN conflicts, and suppress C++ warnings
+# Ensure legacy Keras, disable oneDNN conflicts, set python protobuf, and suppress C++ warnings
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 os.environ["TF_USE_LEGACY_KERAS"] = "1"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
@@ -15,9 +16,7 @@ import cv2
 from PIL import Image
 import streamlit as st
 
-from anpr_engine import ANPREngine
-
-# Page Configuration - auto sidebar for mobile, wide on desktop
+# Page Configuration MUST be the first Streamlit command called
 st.set_page_config(
     page_title="Smart Number Plate Reader",
     page_icon="🚗",
@@ -270,6 +269,7 @@ st.markdown("""
 @st.cache_resource(show_spinner="Initializing SSD MobileNet & EasyOCR Engine...")
 def get_engine():
     """Initializes and caches the ANPR Engine in memory for high-speed inference."""
+    from anpr_engine import ANPREngine
     return ANPREngine()
 
 
