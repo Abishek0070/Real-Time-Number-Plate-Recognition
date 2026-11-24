@@ -16,7 +16,7 @@ import cv2
 from PIL import Image
 import streamlit as st
 
-# Page Configuration MUST be the first Streamlit command called
+
 st.set_page_config(
     page_title="Smart Number Plate Reader",
     page_icon="🚗",
@@ -24,7 +24,6 @@ st.set_page_config(
     initial_sidebar_state="auto"
 )
 
-# Custom Styling (Dark Glassmorphism, Cyber Automotive Theme, Full Mobile Responsive)
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
